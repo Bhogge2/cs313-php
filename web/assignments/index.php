@@ -11,10 +11,7 @@
 <body>
     <div class="content">
         <nav>
-            <div>
-                <a href="/home.php">Introduction</a>
-                <a href="/assignments/index.php">Assignments</a>
-            </div>
+        <?php include './common/header.php'; ?>
         </nav>
         
         <?php echo "Today is " . date("D M d"); ?>
