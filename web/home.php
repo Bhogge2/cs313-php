@@ -13,7 +13,7 @@
         <nav>
             <div>
                 <a href="/home.php">Introduction</a>
-                <a href="/assignments.php">Assignments</a>
+                <a href="/assignments/index.php">Assignments</a>
             </div>
         </nav>
         <h1>About Me</h1>

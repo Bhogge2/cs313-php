@@ -7,3 +7,6 @@ To push to heroku and github you need to:
 5. Type "git commit -m message goes here"
 6. Push to heroku with "git push heroku master"
 7. Push to github with "git push github master"
+
+TYPE "heroku open" to open your application
+
