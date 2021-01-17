@@ -1,0 +1,9 @@
+To push to heroku and github you need to:
+
+1. Open the command prompt
+2. Type "cd cs313-php" and hit enter
+3. Type "git status" to see if there are any changes that need to be pushed
+4. If you want to add everything in the "web" folder type "git add web"
+5. Type "git commit -m message goes here"
+6. Push to heroku with "git push heroku master"
+7. Push to github with "git push github master"
