@@ -11,10 +11,7 @@
 <body>
     <div class="content">
         <nav>
-            <div>
-                <a href="/home.php">Introduction</a>
-                <a href="/assignments/index.php">Assignments</a>
-            </div>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/cs313-php/web/common/header.php'; ?>
         </nav>
         <h1>About Me</h1>
         <div class="aboutDiv">
