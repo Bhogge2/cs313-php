@@ -23,9 +23,11 @@ if(isset($_GET["action"]))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 <body>
+    <h1>Your Cart</h1>
     <?php
         if(!empty($_SESSION["shoppingCart"])) 
         {
@@ -35,7 +37,7 @@ if(isset($_GET["action"]))
                 ?>
                 <div><?php echo $values["item_name"] ?></div>
                 <div>$<?php echo $values["item_price"] ?></div>
-                <a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span>Remove</span></a>
+                <a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span>Remove</span></a>
                 <?php
                 $total = $total + ($values["item_quantity"] * $values["item_price"]);
             }   
