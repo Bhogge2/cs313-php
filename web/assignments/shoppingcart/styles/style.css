@@ -6,6 +6,7 @@ div.productList {
 div.product {
 text-align: center;
 font-size: 2em;
+padding: 50px;
 }
 
 div.productDetail{
@@ -14,4 +15,5 @@ div.productDetail{
 
 h1 {
     text-align: center;
+    font-size: 3em;
 }
