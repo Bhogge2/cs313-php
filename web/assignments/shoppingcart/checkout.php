@@ -9,6 +9,7 @@ if(isset($_POST["completeCheckout"])){
         'zip' => $_POST["zip"]
     );
     $_SESSION["address"] = $address_array;
+    echo '<script>window.location="confirmation.php"</script>';
 }
 
 ?>
@@ -28,7 +29,7 @@ if(isset($_POST["completeCheckout"])){
     <h2>Address</h2>
 
     <a href="./cart.php">Return to Cart</a>
-    <form method="post" action="./confirmation.php">
+    <form method="post" action="">
         <div class='product'>
             <p>Please enter your street address</p>
             <input type="text" name="street" />
