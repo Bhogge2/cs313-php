@@ -18,6 +18,7 @@ $products_array = array (
 </head>
 <body>
 <h1>Shopping Cart Assignment</h1>
+<div class="productList">
     <?php
 
 foreach ($products_array as $product) {
@@ -29,5 +30,6 @@ foreach ($products_array as $product) {
     }
 
     ?>
+    </div>
 </body>
 </html>
