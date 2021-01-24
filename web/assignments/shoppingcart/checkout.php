@@ -28,8 +28,7 @@ if(isset($_POST["completeCheckout"])){
     <h2>Address</h2>
 
     <a href="./cart.php">Return to Cart</a>
-    <a href="./confirmation.php" name="completeAddress">Complete Purchase</a>
-    <form method="post" action="./confirmation.php">
+    <form method="post" action="">
         <div class='product'>
             <p>Please enter your street number</p>
             <input type="text" name="street" />
