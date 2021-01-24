@@ -12,9 +12,9 @@ $products_array = array (
                 $count = count($_SESSION["shoppingCart"]);
                 $item_array = array(
                     'item_id' => $_GET["id"],
-                    'item_name' => $_POST["hidden_name"],
-                    'item_price' => $_POST["hidden_price"],
-                    'item_quantity' => $_POST["quantity"]
+                    'item_name' => filter_var($_POST["hidden_name"], FILTER_SANITIZE_STRING),
+                    'item_price' => filter_var($_POST["hidden_price"], FILTER_SANITIZE_STRING),
+                    'item_quantity' => filter_var($_POST["quantity"], FILTER_SANITIZE_STRING)
                 );
                 $_SESSION["shoppingCart"][$count] = $item_array;
             }
@@ -27,9 +27,9 @@ $products_array = array (
         {
             $item_array = array(
                 'item_id' => $_GET["id"],
-                'item_name' => $_POST["hidden_name"],
-                'item_price' => $_POST["hidden_price"],
-                'item_quantity' => $_POST["quantity"]
+                'item_name' => filter_var($_POST["hidden_name"], FILTER_SANITIZE_STRING),
+                'item_price' => filter_var($_POST["hidden_price"], FILTER_SANITIZE_STRING),
+                'item_quantity' => filter_var($_POST["quantity"], FILTER_SANITIZE_STRING)
             );
             $_SESSION["shoppingCart"][0] = $item_array;
         }
