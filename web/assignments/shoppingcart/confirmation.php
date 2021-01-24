@@ -13,7 +13,7 @@ session_start();
 </head>
 <body>
     <?php
-        echo '<p>Address: ' . $_SESSION["address_array"]["street"] . ', ' . $_SESSION["address_array"]["city"] . ', ' . $_SESSION["address_array"]["state"] . ' ' . $_SESSION["address_array"]["zip"] . '</p>';
+        echo '<p>Address: ' . $_SESSION["address"]["street"] . ', ' . $_SESSION["address"]["city"] . ', ' . $_SESSION["address"]["state"] . ' ' . $_SESSION["address"]["zip"] . '</p>';
     ?>
 </body>
 </html>
