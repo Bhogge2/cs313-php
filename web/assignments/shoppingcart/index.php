@@ -13,15 +13,19 @@ $products_array = array (
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 <body>
+<h1>Shopping Cart Assignment</h1>
     <?php
 
 foreach ($products_array as $product) {
+    echo "<div class='product'>";
         foreach($product as $productdetail) {
-        echo "<div><p>$productdetail</p></div>";
+        echo "<div class='productDetail'<p>$productdetail</p></div>";
         }
+        echo "</div>";
     }
 
     ?>
