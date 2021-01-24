@@ -3,7 +3,7 @@
 session_start();
 if(isset($_POST["completeCheckout"])){
     $address_array = array(
-        'street' => $_GET["street"],
+        'street' => $_POST["street"],
         'city' => $_POST["city"],
         'state' => $_POST["state"],
         'zip' => $_POST["zip"]
@@ -30,7 +30,7 @@ if(isset($_POST["completeCheckout"])){
     <a href="./cart.php">Return to Cart</a>
     <form method="post" action="">
         <div class='product'>
-            <p>Please enter your street number</p>
+            <p>Please enter your street address</p>
             <input type="text" name="street" />
             <p>Please enter your city</p>
             <input type="text" name="city" />
