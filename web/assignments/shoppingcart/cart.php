@@ -27,6 +27,7 @@ if(isset($_GET["action"]))
     <title>Document</title>
 </head>
 <body>
+<?php include './common/header.php'; ?>
     <h1>Your Cart</h1>
     <?php
         if(!empty($_SESSION["shoppingCart"])) 

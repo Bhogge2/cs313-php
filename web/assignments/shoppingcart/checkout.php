@@ -12,6 +12,6 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    
+<?php include './common/header.php'; ?>
 </body>
 </html>
