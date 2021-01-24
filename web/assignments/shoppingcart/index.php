@@ -25,8 +25,8 @@ foreach ($products_array as $key=>$product) {
     ?>
     <div class='product'>
         <div class='productDetail'>
-            <p><?php echo $product_array[$key]["name"]; ?></p>
-            <p><?php echo $product_array[$key]["price"]; ?></p>
+            <p><?php echo $products_array[$key]["name"]; ?></p>
+            <p><?php echo $products_array[$key]["price"]; ?></p>
         </div>
     </div>
     <?php
