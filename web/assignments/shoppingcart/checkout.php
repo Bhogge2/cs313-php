@@ -3,10 +3,10 @@
 session_start();
 if(isset($_POST["completeCheckout"])){
     $address_array = array(
-        'street' => $_POST["street"],
-        'city' => $_POST["city"],
-        'state' => $_POST["state"],
-        'zip' => $_POST["zip"]
+        'street' => filter_var($_POST["street"], FILTER_SANITIZE_STRING),
+        'city' => filter_var($_POST["city"], FILTER_SANITIZE_STRING),
+        'state' => filter_var($_POST["state"], FILTER_SANITIZE_STRING),
+        'zip' => filter_var($_POST["zip"], FILTER_SANITIZE_NUMBER_INT)
     );
     $_SESSION["address"] = $address_array;
     echo '<script>window.location="confirmation.php"</script>';
