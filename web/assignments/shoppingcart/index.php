@@ -20,7 +20,7 @@ $products_array = array (
             }
             else
             {
-                echo '<script>window.location="index.php"</script>'
+                echo '<script>window.location="index.php"</script>';
             }
         }
         else
