@@ -67,19 +67,7 @@ foreach ($products_array as $key=>$product) {
     </form>
     <?php
     }
-
     ?>
-<!--
-foreach ($products_array as $key=>$product) {
-    echo "<div class='product'>";
-        foreach($product as $productdetail) {
-        echo "<div class='productDetail'<p>$productdetail</p></div>";
-        }
-        echo "</div>";
-    }
-
-    ?>
--->
     </div>
 </body>
 </html>

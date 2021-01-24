@@ -45,7 +45,7 @@ if(isset($_GET["action"]))
                 $total = $total + ($values["item_quantity"] * $values["item_price"]);
             }   
             ?>
-            <p>$ <?php echo number_format($total, 2) ?></p>
+            <p>$<?php echo number_format($total, 2) ?></p>
             <?php
         }
     ?>
