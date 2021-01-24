@@ -1,9 +1,9 @@
 <?php
 session_start();
 $products_array = array (
-    array ('id' =>"1", 'name'=>"Chair", 'price'=>"$20"),
-    array ('id' =>"2", 'name'=>"Matress", 'price'=>"$70"),
-    array ('id' =>"3", 'name'=>"Desk", 'price'=>"$50")
+    array ('id' =>"1", 'name'=>"Chair", 'price'=>"20"),
+    array ('id' =>"2", 'name'=>"Matress", 'price'=>"70"),
+    array ('id' =>"3", 'name'=>"Desk", 'price'=>"50")
     );
     if(isset($_POST["addToCartBtn"])){
         if(isset($_SESSION["shoppingCart"])){
