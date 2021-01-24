@@ -46,7 +46,8 @@ $products_array = array (
     <title>Document</title>
 </head>
 <body>
-<h1>Shopping Cart Assignment</h1>
+<?php include './common/header.php'; ?>
+<h1>Products</h1>
 <div class="productList">
     <?php
 
