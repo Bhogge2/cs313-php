@@ -49,5 +49,6 @@ if(isset($_GET["action"]))
             <?php
         }
     ?>
+    <a href="./checkout.php">Continue to Checkout</a>
 </body>
 </html>

@@ -57,7 +57,7 @@ foreach ($products_array as $key=>$product) {
     <div class='product'>
         <div class='productDetail'>
             <p><?php echo $products_array[$key]["name"]; ?></p>
-            <p><?php echo $products_array[$key]["price"]; ?></p>
+            <p>$<?php echo $products_array[$key]["price"]; ?></p>
             <input type="text" name="quantity" value="1" />
             <input type="hidden" name="hidden_name" value="<?php echo $products_array[$key]["name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $products_array[$key]["price"]; ?>">
