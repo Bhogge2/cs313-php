@@ -36,9 +36,11 @@ if(isset($_GET["action"]))
             foreach($_SESSION["shoppingCart"] as $keys => $values)
             {
                 ?>
-                <div><?php echo $values["item_name"] ?></div>
-                <div>$<?php echo $values["item_price"] ?></div>
-                <a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span>Remove</span></a>
+                <div><?php echo $values["item_name"]; ?></div>
+                <div><?php echo $values["item_quantity"]; ?></div>
+                <div>$<?php echo $values["item_price"]; ?></div>
+                <div><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></div>
+                <p><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span>Remove</span></a></p>
                 <?php
                 $total = $total + ($values["item_quantity"] * $values["item_price"]);
             }   
