@@ -1,4 +1,5 @@
 <?php
+require "../web/db/dbAccess.php";
 
 ?>
 
