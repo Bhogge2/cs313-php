@@ -21,7 +21,7 @@ try
         // Go through each result
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo $row['id'];
+            echo $row['pokemon_id'];
         }
 }
 
