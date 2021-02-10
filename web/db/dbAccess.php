@@ -15,14 +15,12 @@ try
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $statement = $db->prepare('SELECT * FROM pokemon');
-        $statement->execute();
-
-        // Go through each result
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            echo $row['pokemon_id'];
-        }
+  foreach ($db->query('SELECT * FROM pokemon') as $row)
+{
+  echo 'Pokemon: ' . $row['pokemon_name'];
+  echo ' Type: ' . $row['pokemon_type'];
+  echo '<br/>';
+}
 }
 
 catch (PDOException $ex)
