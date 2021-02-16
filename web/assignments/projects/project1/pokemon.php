@@ -17,6 +17,7 @@ var_dump($db);
     <label>Pokemon</label>
     <select name='pokemon_filter' id='pokemon_filter' required>
     
+    </select>
     <?php
 // Notice that we avoid using "SELECT *" here. This is considered
 // good practice so we don't inadvertently bring back data we don't
@@ -38,9 +39,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 
 ?>
-    </select>
     <button type="submit">Submit Form</button>
-    <form> 
+    </form> 
 </html>
 
     </body>
