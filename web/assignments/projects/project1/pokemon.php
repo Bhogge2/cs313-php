@@ -22,7 +22,7 @@ var_dump($db);
 // Notice that we avoid using "SELECT *" here. This is considered
 // good practice so we don't inadvertently bring back data we don't
 // want, especially if the database changes later.
-$statement = $db->prepare("SELECT pokemon_name, pokemon_type, pokemon_type2 FROM pokemon");
+$statement = $db->prepare("SELECT * FROM pokemon");
 $statement->execute();
 
 // Go through each result
