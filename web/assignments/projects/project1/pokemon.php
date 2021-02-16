@@ -11,8 +11,7 @@ var_dump($db);
     </head>
     <body>
         <h1>Pokemon App</h1>
-    </body>
-
+        
     <form method="post" action="/">
     <p>Search by:</p>
     <label>Pokemon</label>
@@ -25,16 +24,7 @@ var_dump($db);
 $statement = $db->prepare("SELECT * FROM pokemon");
 $statement->execute();
 
-foreach ($db->query('SELECT * FROM pokemon') as $row)
-{
-    $pokemon_name = $row['pokemon_name'];
-	$pokemon_type = $row['pokemon_type'];
-	$pokemon_type2 = $row['pokemon_type2'];
-
-	echo "<p><strong>$pokemon_name: $pokemon_type - $pokemon_type2</strong></p>";
-}
 // Go through each result
-/*
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	// The variable "row" now holds the complete record for that
@@ -44,12 +34,13 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$pokemon_type = $row['pokemon_type'];
 	$pokemon_type2 = $row['pokemon_type2'];
 
-	echo "<p><strong>$pokemon_name: $pokemon_type - $pokemon_type2</strong><p>";
+	echo "<p><strong>$pokemon_name: $pokemon_type - $pokemon_type2</strong></p>";
 }
-*/
 
 ?>
     </select>
     <button type="submit">Submit Form</button>
     <form> 
 </html>
+
+    </body>
