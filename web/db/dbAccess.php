@@ -1,11 +1,5 @@
 <?php
 
-
-function get_db(){
-    $db = NULL;
-
-
-
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -22,14 +16,11 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
+
 catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}
-
-return $db;
-
 }
 
 ?>
