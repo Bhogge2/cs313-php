@@ -1,6 +1,6 @@
 <?php
 require "../../../db/dbAccess.php";
-//$db = get_db();
+$db = get_db();
 var_dump($db);
 ?>
 
