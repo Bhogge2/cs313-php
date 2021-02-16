@@ -1,5 +1,5 @@
 <?php
-require "./db/dbAccess.php";
+require "../../../db/dbAccess.php";
 
 ?>
 
