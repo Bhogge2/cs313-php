@@ -11,5 +11,6 @@ To push to heroku and github you need to:
 TYPE "heroku open" to open your application
 
 "heroku pg:psql" to open the database
+"\dt" to view all the tables
 
 
