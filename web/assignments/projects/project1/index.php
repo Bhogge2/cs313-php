@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  
   <?php include 'navbar.php'; ?>
   <div class="container big-container">
   </div>
