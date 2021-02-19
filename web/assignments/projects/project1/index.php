@@ -13,22 +13,6 @@
 <body>
   <?php include 'navbar.php'; ?>
   <div class="container big-container">
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" href="pokemon.php">Pokemon</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Account</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="signIn.php">Sign In / Sign Up</a>
-      </li>
-    </ul>
-    <div class="container">
-      <div class="row">
-
-      </div>
-    </div>
   </div>
 </body>
 
