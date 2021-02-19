@@ -13,7 +13,8 @@ $db = get_db();
 </head>
 
 <body>
-    <div class="container">
+    <?php include 'navbar.php'; ?>
+    <div class="container big-container">
         <h1>Pokemon App</h1>
 
         <form method="post" action="/">

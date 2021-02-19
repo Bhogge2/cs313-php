@@ -54,7 +54,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 </head>
 
 <body>
-	<div class="container">
+	<?php include 'navbar.php'; ?>
+	<div class="container big-container">
 
 		<?php
 		if ($badLogin) {

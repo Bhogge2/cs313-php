@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div class="container">
+  <?php include 'navbar.php'; ?>
+  <div class="container big-container">
     <ul class="nav justify-content-end">
       <li class="nav-item">
         <a class="nav-link active" href="pokemon.php">Pokemon</a>

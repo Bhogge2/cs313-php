@@ -11,7 +11,8 @@
 </head>
 
 <body>
-	<div class="container">
+	<?php include 'navbar.php'; ?>
+	<div class="container big-container">
 
 		<h1>Sign up for new account</h1>
 

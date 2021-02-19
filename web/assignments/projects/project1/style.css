@@ -9,6 +9,7 @@ body {
     background-size: cover;
 }
 
-.container {
+.big-container {
     background-color: #FFFCE7;
+    height: 100vw;
 }
