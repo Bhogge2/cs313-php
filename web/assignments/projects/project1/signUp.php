@@ -18,13 +18,15 @@
 
 		<form id="mainForm" action="createAccount.php" method="POST">
 
-			<input type="text" id="txtUser" name="txtUser" placeholder="Username">
-			<label for="txtUser">Username</label>
-			<br /><br />
+			<div class="form-group">
+				<label for="txtUser">Username</label>
+				<input type="text" id="txtUser" name="txtUser" placeholder="Username" class="form-control">
+			</div>
 
-			<input type="password" id="txtPassword" name="txtPassword" placeholder="Password"></input>
-			<label for="txtPassword">Password</label>
-			<br /><br />
+			<div class="form-group">
+				<label for="txtPassword">Password</label>
+				<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" class="form-control">
+			</div>
 
 			<input type="submit" value="Create Account" />
 
