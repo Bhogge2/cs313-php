@@ -1,0 +1,10 @@
+body {
+    
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url(pokelandscape.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
