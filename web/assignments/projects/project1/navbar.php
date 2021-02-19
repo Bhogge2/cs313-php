@@ -1,19 +1,20 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.php" class="navbar-brand">Pokemon Favorites</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="index.php">Pokemon</a></li>
-                    <li><a href="signIn.php">Sign In / Sign In</a></li>
-                </ul>
-            </div>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php">Pokemon Favorites</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pokemon.php">Pokemon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signIn.php">Sign In / Sign Up</a>
+            </li>
+        </ul>
     </div>
+</nav>
