@@ -14,3 +14,7 @@ body {
 .light-blue {
     background-color: #F1FDFF!important;
 }
+
+.small-input {
+    max-width: 350px;
+}

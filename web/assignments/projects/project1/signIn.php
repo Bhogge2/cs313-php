@@ -69,15 +69,15 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
 			<div class="form-group">
 			<label for="txtUser">Username</label>
-				<input type="text" id="txtUser" name="txtUser" placeholder="Username" class="form-control">
+				<input type="text" id="txtUser" name="txtUser" placeholder="Username" class="form-control small-input">
 			</div>
 
 			<div class="form-group">
 				<label for="txtPassword">Password</label>
-				<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" class="form-control">
+				<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" class="form-control small-input">
 			</div>
 
-			<input type="submit" value="Sign In" />
+			<input type="submit" value="Sign In" class="btn btn-primary" />
 
 		</form>
 
