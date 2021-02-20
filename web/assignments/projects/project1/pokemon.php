@@ -1,52 +1,28 @@
-<?php
-require "dbAccess.php";
-$db = get_db();
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Pokemon</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - Pokemon</title>
+    <link rel="stylesheet" href="api.css">
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
-    <div class="container big-container">
-        <h1>Pokemon App</h1>
-
-        <form method="post" action="/">
-            <p>Search by:</p>
-            <label>Pokemon</label>
-            <select name='pokemon_filter' id='pokemon_filter' required>
-                <option value="$pokemon_name"></option>
-                <?php
-                // Notice that we avoid using "SELECT *" here. This is considered
-                // good practice so we don't inadvertently bring back data we don't
-                // want, especially if the database changes later.
-                $statement = $db->prepare("SELECT * FROM pokemon");
-                $statement->execute();
-
-                // Go through each result
-                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    // The variable "row" now holds the complete record for that
-                    // row, and we can access the different values based on their
-                    // name
-                    $pokemon_name = $row['pokemon_name'];
-                    $pokemon_type = $row['pokemon_type'];
-                    $pokemon_type2 = $row['pokemon_type2'];
-
-                    echo "<option value=" . $pokemon_name . ">" . $pokemon_name . "</option>";
-                }
-
-                ?>
-            </select>
-            <button type="submit">Submit Form</button>
-        </form>
+    <nav>
+        <span id="allPokemon" class="active">All</span>
+        <span id="favoritePokemon">Favorites</span>
+    </nav>
+    <div class="content">
+        <input type="text" id="myInput" onkeyup="filterPokemon()" placeholder="Search for Pokemon..."
+            title="Type in a Pokemon">
+        <div class="listBox">
+            <ul id="allList"></ul>
+            <ul id="favoritesList" class="hide"></ul>
+        </div>
     </div>
 
-</html>
-
+    <script src="pokemon.js"></script>
 </body>
+
+</html>
