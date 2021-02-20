@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <script src="pokemon.js"></script>
+        <script src="GetPokemonAPI.js"></script>
     </body>
 </body>
 
