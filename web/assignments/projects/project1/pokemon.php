@@ -10,10 +10,6 @@
 </head>
 
 <body>
-    <nav>
-        <span id="allPokemon" class="active">All</span>
-        <span id="favoritePokemon">Favorites</span>
-    </nav>
     <div class="container">
         <div class="content">
             <input type="text" id="myInput" onkeyup="filterPokemon()" placeholder="Search for Pokemon..." title="Type in a Pokemon">
