@@ -13,14 +13,23 @@
                 <li class="nav-item">
                     <a class="nav-link" href="pokemon.php">Pokemon</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signIn.php">Sign In / Sign Up</a>
-                </li>
+                <?php
+                if (isset($_SESSION['username']) == false) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signIn.php">Sign In / Sign Up</a>
+                    </li>
+                <?php
+                }
+                ?>
                 <?php
                 if (isset($_SESSION['username'])) {
                 ?>
                     <li class="nav-item">
-                    <a class="nav-link" href="signOut.php">Sign Out</a>
+                        <a class="nav-link" href="favorites.php">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signOut.php">Sign Out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Welcome <?php echo $_SESSION['username']; ?>!</a>
