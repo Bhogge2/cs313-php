@@ -15,7 +15,6 @@
             <input type="text" id="myInput" onkeyup="filterPokemon()" placeholder="Search for Pokemon..." title="Type in a Pokemon">
             <div class="listBox">
                 <ul id="allList"></ul>
-                <ul id="favoritesList" class="hide"></ul>
             </div>
         </div>
     </div>

@@ -97,6 +97,7 @@ function filterPokemon() {
     }
 }
 
+/*
 function addToFavorites(event) {
     console.log(event);
     let favorites = [];
@@ -113,7 +114,8 @@ function addToFavorites(event) {
     console.log(favorites);
     localStorage.setItem("favorites", JSON.stringify(favorites));
 }
-
+*/
+/*
 function displayFavorites() {
 
     document.getElementById("favoritePokemon").classList.add("active");
@@ -162,20 +164,7 @@ function displayFavorites() {
     });
 
 }
-
-
-function displayAllPokemon() {
-    if (allList.className.includes("hide")) {
-        allList.classList.remove("hide");
-        favoritesList.classList.add("hide");
-    }
-
-    document.getElementById("allPokemon").classList.add("active");
-    document.getElementById("favoritePokemon").classList.remove("active");
-
-    document.getElementById("myInput").style.opacity = 100;
-
-}
+*/
 
 function removeFromFavorites(event) {
     let favorites = JSON.parse(localStorage.getItem("favorites"));
@@ -189,6 +178,4 @@ function removeFromFavorites(event) {
     displayFavorites();
 }
 
-document.getElementById("allPokemon").addEventListener("click", displayAllPokemon);
-document.getElementById("favoritePokemon").addEventListener("click", displayFavorites);
 getAllPokemon();
