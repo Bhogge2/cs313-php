@@ -14,7 +14,7 @@
 	<?php include 'navbar.php'; ?>
 	<div class="container big-container">
 
-		<form id="mainForm" class="form-signin" action="createAccount.php" method="POST">
+		<form id="mainForm" class="form-signin" action="createAccount.php" method="POST" style="margin-top: 20px;">
 			<h1 class="h3 mb-3 font-weight-normal">Sign up for a new account</h1>
 
 			<label for="inputUsername" class="sr-only">Username</label>
