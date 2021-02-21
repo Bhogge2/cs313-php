@@ -53,7 +53,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 	<title>Sign In</title>
 </head>
 
-<body>
+<body class="text-center">
 	<?php include 'navbar.php'; ?>
 	<div class="container big-container">
 
