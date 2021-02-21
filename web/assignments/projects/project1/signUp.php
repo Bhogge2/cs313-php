@@ -19,13 +19,13 @@
 			<h1 class="h4 mb-4 font-weight-normal">Sign up for a new account</h1>
 
 			<label for="username" class="sr-only">Username</label>
-			<input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+			<input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
 
 			<label for="password" class="sr-only">Password</label>
-			<input type="password" id="password" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
+			<input type="password" id="password" name="password" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
 
 			<label for="password2" class="sr-only">Confirm Password</label>
-			<input type="password" id="password2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
+			<input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 
