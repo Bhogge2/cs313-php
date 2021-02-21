@@ -11,7 +11,7 @@ body {
     box-sizing: border-box;
 }
 
-ul>li {
+ul.allList>li {
     font-size: 2em;
     list-style: none;
     border: 2px solid black;
@@ -44,10 +44,6 @@ img {
     height: 2em;
     font-size: 1.6em;
     margin: 100px 10px 10px 10px;
-}
-
-ul#favoritesList {
-    padding-left: 0px;
 }
 
 .btnAdd {
@@ -86,7 +82,3 @@ ul#favoritesList {
     transition: all 0.3s;
     flex: 1 0 90vw;
   }
-
-.active {
-    border-bottom: 4px solid #181f52;
-}
