@@ -76,10 +76,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 		<form id="mainForm" class="form-signin" action="signIn.php" method="POST" style="margin-top: 50px;">
 			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-			<label for="inputUsername" class="sr-only">Username</label>
-			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<label for="username" class="sr-only">Username</label>
+			<input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+			<label for="password" class="sr-only">Password</label>
+			<input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
 			<div class="checkbox mb-3">
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

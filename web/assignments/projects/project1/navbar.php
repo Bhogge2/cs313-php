@@ -20,7 +20,7 @@
                 if (isset($_SESSION['username'])) {
                 ?>
                     <li class="nav-item">
-                        Welcome <?php echo $_SESSION['username']; ?>!
+                        Welcome <?php echo $_SESSION['username'] . "#" . $_SESSION['user_id']; ?>!
                     </li>
                 <?php
                 }
