@@ -19,7 +19,9 @@ function getFavoritePokemon(pokemonId) {
         data["results"].forEach(function (value) {
             getJSON(value.url).then(function (pkm) {
 
-                if (pokemonId == pkm.id) {
+                pokemonId.forEach(function(element){
+
+                if (element == pkm.id) {
                     //console.log(value);
                     let item = document.createElement("li");
                     let uppercaseName = value.name.charAt(0).toUpperCase() + value.name.slice(1);
@@ -43,7 +45,7 @@ function getFavoritePokemon(pokemonId) {
                     div.addEventListener("click", toggleDetails);
                     btn.addEventListener("click", removeFromFavorites);
                     // div.querySelector(".pokeimg").addEventListener("click", showExtraDetails)
-                }
+                }})
             });
         });
         console.log("finished JSON");
