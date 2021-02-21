@@ -24,15 +24,28 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require("dbAccess.php");
 $db = get_db();
 
-$query = 'INSERT INTO users(username, password) VALUES(:username, :password1)';
-$statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
-
-$statement->bindValue(':password1', $hashedPassword);
-
-$statement->execute();
-
-header("Location: signIn.php");
-die();
+#check if the username already exists in the database
+$stmt = $db->prepare('SELECT username FROM users WHERE username=:username');
+$stmt->bindValue(':username', $username, PDO::PARAM_INT);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if(sizeof($rows) != 0)
+{
+       header("Location: signUp.php");
+       die();
+}
+else
+{
+       $query = 'INSERT INTO users(username, password) VALUES(:username, :password1)';
+       $statement = $db->prepare($query);
+       $statement->bindValue(':username', $username);
+       
+       $statement->bindValue(':password1', $hashedPassword);
+       
+       $statement->execute();
+       
+       header("Location: signIn.php");
+       die(); 
+}
 
 ?>
