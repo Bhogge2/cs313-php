@@ -145,6 +145,9 @@ if (isset($_SESSION['user_id'])) {
             xhttp.open('POST', 'removeFavorite.php', true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send(query);
+            setTimeout(function() {
+                document.location.reload()
+            }, 1000);
         }
     </script>
 

@@ -20,7 +20,6 @@ $statement->bindValue(':pokemonId', $pokemon_id);
 
 $statement->execute();
 
-header("Refresh: 3");
 die(); 
 
 
