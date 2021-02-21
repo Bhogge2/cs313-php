@@ -20,7 +20,7 @@ $statement->bindValue(':pokemonId', $pokemon_id);
 
 $statement->execute();
 
-header("Location: favorites.php");
+header("Refresh: 3");
 die(); 
 
 
