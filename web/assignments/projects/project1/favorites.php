@@ -135,6 +135,8 @@ if (isset($_SESSION['user_id'])) {
             var pokemon_id = event.target.dataset.pokemon;
             xhttp = new XMLHttpRequest();
 
+            console.log(pokemon_id);
+
             var query = ('pokemonId=' + pokemon_id);
             xhttp.open('POST', 'removeFavorite.php', true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
