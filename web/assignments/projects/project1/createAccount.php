@@ -24,11 +24,11 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require("dbAccess.php");
 $db = get_db();
 
-$query = 'INSERT INTO users(username, password) VALUES(:username, :password)';
+$query = 'INSERT INTO users(username, password) VALUES(:username, :password1)';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 
-$statement->bindValue(':password', $hashedPassword);
+$statement->bindValue(':password1', $hashedPassword);
 
 $statement->execute();
 
