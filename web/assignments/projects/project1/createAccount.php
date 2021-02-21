@@ -24,11 +24,11 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require("dbAccess.php");
 $db = get_db();
 
-$queryCheck = 'SELECT username FROM users WHERE username=:username';
+$queryCheck = 'SELECT * FROM users WHERE username=:username';
 $statementCheck = $db->prepare($queryCheck);
 $statementCheck->bindValue(':username', $username);
 
-$result = $statement->execute();
+$result = $statementCheck->execute();
 
 if($result)
 {
