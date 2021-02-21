@@ -18,16 +18,16 @@
 		<form id="mainForm" class="form-signin" style="margin-top: 50px;">
 			<h1 class="h4 mb-4 font-weight-normal">Sign up for a new account</h1>
 
-			<label for="inputUsername" class="sr-only">Username</label>
-			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+			<label for="username" class="sr-only">Username</label>
+			<input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
 
-			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
+			<label for="password" class="sr-only">Password</label>
+			<input type="password" id="password" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
 
-			<label for="inputPassword2" class="sr-only">Confirm Password</label>
-			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
+			<label for="password2" class="sr-only">Confirm Password</label>
+			<input type="password" id="password2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
 
-			<input class="btn btn-lg btn-primary btn-block" type="button" onclick="createAccountChecks()">Create Account</input>
+			<input class="btn btn-lg btn-primary btn-block" type="button" onclick="createAccountChecks()" value="Create Account" />
 
 			Already have an account? <a href="signIn.php">Sign in here.</a>
 		</form>
