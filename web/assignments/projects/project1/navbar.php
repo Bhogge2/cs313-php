@@ -20,7 +20,7 @@
                 if (isset($_SESSION['username'])) {
                 ?>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Out</a>
+                    <a class="nav-link" href="signOut.php">Sign Out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Welcome <?php echo $_SESSION['username']; ?>!</a>

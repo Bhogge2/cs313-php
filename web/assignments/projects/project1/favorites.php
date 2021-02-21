@@ -14,41 +14,33 @@ session_start();
     <title>Pokemon</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="api.css">
+    <script src="favorites.js"></script>
 </head>
 
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container big-container">
-        <h1>Pokemon App</h1>
-
-        <form method="post" action="/">
-            <p>Search by:</p>
-            <label>Pokemon</label>
-            <select name='pokemon_filter' id='pokemon_filter' required>
-                <option value="$pokemon_name"></option>
+        <h1 style="text-align:center; color: white; text-shadow: 2px 2px 5px black;">Your Favorite Pokemon</h1>
+        <div class="listBox">
+            <ul id="favoritesList">
                 <?php
-                // Notice that we avoid using "SELECT *" here. This is considered
-                // good practice so we don't inadvertently bring back data we don't
-                // want, especially if the database changes later.
-                $statement = $db->prepare("SELECT * FROM pokemon");
+                $statement = $db->prepare("SELECT pokemon_id FROM user_favorites WHERE user_id=:userId");
+                $statement2->bindValue(':userId', $_SESSION['user_id']);
                 $statement->execute();
 
-                // Go through each result
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    // The variable "row" now holds the complete record for that
-                    // row, and we can access the different values based on their
-                    // name
-                    $pokemon_name = $row['pokemon_name'];
-                    $pokemon_type = $row['pokemon_type'];
-                    $pokemon_type2 = $row['pokemon_type2'];
 
-                    echo "<option value=" . $pokemon_name . ">" . $pokemon_name . "</option>";
+                    $pokemonId = $row['pokemon_id'];
+
+                    echo '<script type="text/javascript">',
+                    'getFavoritePokemon(' . $pokemonId . ');',
+                    '</script>';
                 }
 
                 ?>
-            </select>
-            <button type="submit">Submit Form</button>
-        </form>
+            </ul>
+        </div>
     </div>
 
 </html>

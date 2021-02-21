@@ -17,6 +17,7 @@ session_start();
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container">
+    <h1 style="text-align:center; color: white; text-shadow: 2px 2px 5px black;">All Pokemon</h1>
         <div class="content">
             <input type="text" id="myInput" onkeyup="filterPokemon()" placeholder="Search for Pokemon..." title="Type in a Pokemon">
             <div class="listBox">
