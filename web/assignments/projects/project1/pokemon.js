@@ -113,90 +113,9 @@ function addToFavorites(event) {
     }
 
     var query = ('pokemonId=' + pokemon_id);
-    xhttp.open('POST', '.addFavorite.php', true);
+    xhttp.open('POST', 'addFavorite.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(query);
 }
-/*
-function addToFavorites(event) {
-    console.log(event);
-    let favorites = [];
-    if (localStorage.getItem("favorites") !== null) {
-        favorites = JSON.parse(localStorage.getItem("favorites"));
-    }
-
-    favorites.push({
-        name: event.target.dataset.pkmName,
-        id: event.target.dataset.pokemon,
-        url: event.target.dataset.url
-    });
-
-    console.log(favorites);
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-*/
-/*
-function displayFavorites() {
-
-    document.getElementById("favoritePokemon").classList.add("active");
-    document.getElementById("allPokemon").classList.remove("active");
-
-    let favorites = JSON.parse(localStorage.getItem("favorites"));
-    console.log(favorites);
-    document.getElementById("allList").classList.add("hide");
-
-    let favoritesList = document.getElementById("favoritesList");
-    favoritesList.innerHTML = "";
-    favoritesList.classList.remove("hide");
-    document.getElementById("myInput").style.opacity = 0;
-
-    if (favorites.length == 0) {
-        let item = document.createElement("li");
-        let div = document.createElement("div");
-        div.innerHTML = "You have no favorites!";
-        item.appendChild(div);
-        favoritesList.appendChild(item);
-        return;
-    }
-
-    favorites.forEach(value => {
-        let item = document.createElement("li");
-        let uppercaseName = value.name.charAt(0).toUpperCase() + value.name.slice(1);
-        let div = document.createElement("div");
-        div.classList.add("pokemonName");
-        div.dataset.url = value.url;
-        div.innerHTML = `${uppercaseName}<div class="details hide ${value.name}Div">
-                                <img class="pokeimg ${value.name}" src="" />
-                                </div>`;
-
-        let btn = document.createElement("button");
-        btn.innerHTML = "X";
-        btn.dataset.pokemon = value.name;
-        btn.classList.add("removeFavorite");
-
-        item.appendChild(div);
-        item.appendChild(btn);
-        favoritesList.appendChild(item);
-
-
-        div.addEventListener("click", toggleDetails);
-        btn.addEventListener("click", removeFromFavorites);
-    });
-
-}
-*/
-/*
-function removeFromFavorites(event) {
-    let favorites = JSON.parse(localStorage.getItem("favorites"));
-    console.log("item removed");
-    console.log(event.target.attributes[0].value);
-
-    let removeFav = favorites.filter(value => !(value && value.name == event.target.attributes[0].value));
-
-    localStorage.setItem("favorites", JSON.stringify(removeFav));
-
-    displayFavorites();
-}
-*/
 
 getAllPokemon();

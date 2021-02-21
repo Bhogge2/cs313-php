@@ -67,7 +67,7 @@ function removeFromFavorites(event) {
     }
 
     var query = ('pokemonId=' + pokemon_id);
-    xhttp.open('POST', '.removeFavorite.php', true);
+    xhttp.open('POST', 'removeFavorite.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(query);
 }
