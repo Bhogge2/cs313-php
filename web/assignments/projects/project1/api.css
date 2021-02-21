@@ -11,7 +11,7 @@ body {
     box-sizing: border-box;
 }
 
-ul.allList>li {
+.allList>li {
     font-size: 2em;
     list-style: none;
     border: 2px solid black;
