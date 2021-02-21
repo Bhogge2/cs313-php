@@ -102,6 +102,35 @@ if (isset($_SESSION['user_id'])) {
 
         }
 
+
+        function toggleDetails(event) {
+            //console.log(event.target.firstElementChild.lastElementChild);
+            getPokemonDetails(event.target.getAttribute("data-url"), event.target.firstElementChild.lastElementChild);
+            console.log(event);
+            if (event.target.querySelector("div.details").className.includes("hide")) {
+                event.target.querySelector("div.details").classList.add("show");
+                event.target.querySelector("div.details").classList.remove("hide");
+            } else {
+                event.target.querySelector("div.details").classList.add("hide");
+                event.target.querySelector("div.details").classList.remove("show");
+            }
+        }
+
+        function hideExtraDetails() {
+            document.querySelector(".content").classList.add("show");
+            document.querySelector(".extraContents").classList.add("hide");
+        }
+
+        function getPokemonDetails(url, event) {
+            getJSON(url).then(function(data) {
+                console.log(data);
+
+                event.src = data.sprites.front_default;
+
+                console.log(event);
+            });
+        }
+
         function removeFromFavorites(event) {
             var pokemon_id = event.target.dataset.pokemon;
             xhttp = new XMLHttpRequest();

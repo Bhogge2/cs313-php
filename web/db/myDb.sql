@@ -5,19 +5,13 @@ CREATE TABLE users (
 	);
 
 CREATE TABLE user_favorites (
+	id int serial PRIMARY KEY,
 	pokemon_id int NOT NULL,
 	user_id int, 
     CONSTRAINT fk_user_id
       	FOREIGN KEY(user_id)
 	  REFERENCES users(user_id)
 	);
-
-CREATE TABLE pokemon (
-	pokemon_id serial PRIMARY KEY,
-	pokemon_name VARCHAR (80) NOT NULL,
-	pokemon_type VARCHAR (80) NOT NULL,
-	pokemon_type2 VARCHAR (80) NOT NULL
-);
 
 INSERT INTO pokemon (pokemon_name, pokemon_type, pokemon_type2) VALUES ('Bulbasaur', 'Grass', 'Poison');
 INSERT INTO pokemon (pokemon_name, pokemon_type, pokemon_type2) VALUES 
