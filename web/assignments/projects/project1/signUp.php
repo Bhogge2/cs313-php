@@ -21,7 +21,7 @@
 			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
 
 			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
 
 			<label for="inputPassword2" class="sr-only">Confirm Your Password</label>
 			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
