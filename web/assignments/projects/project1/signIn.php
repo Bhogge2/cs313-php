@@ -37,7 +37,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 			$result2 = $statement2->execute();
 
 			$row2 = $statement2->fetch();
-			$user_id = $row['user_id'];
+			$user_id = $row2['user_id'];
 
 			$_SESSION['user_id'] = $user_id;
 
