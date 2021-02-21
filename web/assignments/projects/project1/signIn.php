@@ -65,25 +65,18 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 
 		<h1>Please sign in below:</h1>
 
-		<form id="mainForm" action="signIn.php" method="POST">
-
-			<div class="form-group">
-			<label for="txtUser">Username</label>
-				<input type="text" id="txtUser" name="txtUser" placeholder="Username" class="form-control small-input">
+		<form class="form-signin" action="signIn.php" method="POST">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<label for="inputUsername" class="sr-only">Username</label>
+			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<div class="checkbox mb-3">
 			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
-			<div class="form-group">
-				<label for="txtPassword">Password</label>
-				<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" class="form-control small-input">
-			</div>
-
-			<input type="submit" value="Sign In" class="btn btn-primary" />
-
+			Or <a href="signUp.php">Sign up</a> for a new account.
 		</form>
-
-		<br /><br />
-
-		Or <a href="signUp.php">Sign up</a> for a new account.
 
 	</div>
 
