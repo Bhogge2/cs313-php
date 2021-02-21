@@ -14,7 +14,7 @@
 	<?php include 'navbar.php'; ?>
 	<div class="container big-container">
 
-		<form id="mainForm" class="form-signin" action="createAccount.php" method="POST" style="margin-top: 50px;">
+		<form id="mainForm" class="form-signin" style="margin-top: 50px;">
 			<h1 class="h4 mb-4 font-weight-normal">Sign up for a new account</h1>
 
 			<label for="inputUsername" class="sr-only">Username</label>
@@ -23,10 +23,10 @@
 			<label for="inputPassword" class="sr-only">Password</label>
 			<input type="password" id="inputPassword" class="form-control" placeholder="Password" style="margin-bottom: 10px;" required>
 
-			<label for="inputPassword2" class="sr-only">Confirm Your Password</label>
+			<label for="inputPassword2" class="sr-only">Confirm Password</label>
 			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
 
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+			<button class="btn btn-lg btn-primary btn-block" type="button" onclick="createAccountChecks()">Create Account</button>
 
 			Already have an account? <a href="signIn.php">Sign in here.</a>
 		</form>
