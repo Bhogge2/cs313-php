@@ -44,7 +44,7 @@ if (isset($_SESSION['user_id'])) {
     </div>
     <script>
         var favoritesArray = <?php echo json_encode($favoritesArray); ?>
-        getFavoritePokemon(favoritesArray);
+        getFavoritePokemon(favoritesArray)
 
         function getJSON(url) {
             return fetch(url).then(function(response) {
