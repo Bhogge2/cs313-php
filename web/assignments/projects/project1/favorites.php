@@ -3,6 +3,10 @@ require "dbAccess.php";
 $db = get_db();
 ?>
 
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
