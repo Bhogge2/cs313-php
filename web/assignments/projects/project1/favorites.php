@@ -5,6 +5,11 @@ $db = get_db();
 
 <?php
 session_start();
+
+if(isset($_SESSION['user_id']))
+{
+    header("Location: signIn.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +25,13 @@ session_start();
 
 <body>
     <?php include 'navbar.php'; ?>
-    <div class="container big-container">
+    <div class="container">
         <h1 style="text-align:center; color: white; text-shadow: 2px 2px 5px black; margin-top: 70px;">Your Favorite Pokemon</h1>
         <div class="listBox">
             <ul id="favoritesList">
                 <?php
                 $statement = $db->prepare("SELECT pokemon_id FROM user_favorites WHERE user_id=:userId");
-                $statement2->bindValue(':userId', $_SESSION['user_id']);
+                $statement->bindValue(':userId', $_SESSION['user_id']);
                 $statement->execute();
 
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
