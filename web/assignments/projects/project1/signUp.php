@@ -10,26 +10,25 @@
 	<title>Sign Up</title>
 </head>
 
-<body>
+<body class="text-center">
 	<?php include 'navbar.php'; ?>
 	<div class="container big-container">
 
-		<h1>Sign up for new account</h1>
+		<form id="mainForm" class="form-signin" action="createAccount.php" method="POST">
+			<h1 class="h3 mb-3 font-weight-normal">Sign up for a new account</h1>
 
-		<form id="mainForm" action="createAccount.php" method="POST">
+			<label for="inputUsername" class="sr-only">Username</label>
+			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
 
-			<div class="form-group">
-				<label for="txtUser">Username</label>
-				<input type="text" id="txtUser" name="txtUser" placeholder="Username" class="form-control small-input">
-			</div>
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-			<div class="form-group">
-				<label for="txtPassword">Password</label>
-				<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" class="form-control small-input">
-			</div>
+			<label for="inputPassword2" class="sr-only">Confirm Your Password</label>
+			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" required>
 
-			<input type="submit" value="Create Account" class="btn btn-primary" />
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 
+			Or <a href="signUp.php">Sign up</a> for a new account.
 		</form>
 
 
