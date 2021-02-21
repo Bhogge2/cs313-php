@@ -63,7 +63,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword'])) {
 		}
 		?>
 
-		<form id="mainForm" class="form-signin" action="signIn.php" method="POST" style="margin-top: 20px;">
+		<form id="mainForm" class="form-signin" action="signIn.php" method="POST" style="margin-top: 50px;">
 			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 			<label for="inputUsername" class="sr-only">Username</label>
 			<input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
