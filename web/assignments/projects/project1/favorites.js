@@ -54,17 +54,7 @@ function getFavoritePokemon(pokemonId) {
 function removeFromFavorites(event) {
     var pokemon_id = event.target.dataset.pokemon;
     xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var response = this.response;
-            if (response.includes("true")) {
 
-                window.location.href = "favorites.php";
-            } else {
-                alert(response)
-            }
-        }
-    }
     var query = ('pokemonId=' + pokemon_id);
     xhttp.open('POST', 'removeFavorite.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

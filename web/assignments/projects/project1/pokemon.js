@@ -100,17 +100,6 @@ function filterPokemon() {
 function addToFavorites(event) {
     var pokemon_id = event.target.dataset.pokemon;
     xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var response = this.response;
-            if (response.includes("true")) {
-
-                window.location.href = "pokemon.php";
-            } else {
-                alert(response)
-            }
-        }
-    }
 
     var query = ('pokemonId=' + pokemon_id);
     xhttp.open('POST', 'addFavorite.php', true);
