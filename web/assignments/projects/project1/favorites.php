@@ -62,7 +62,7 @@ if (isset($_SESSION['user_id'])) {
             getJSON("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0%22").then(function(data) {
                 console.log(data);
 
-                let favoriteList = document.getElementById("favoriteList");
+                let favoriteList = document.getElementById("favoritesList");
                 console.log(data);
                 data["results"].forEach(function(value) {
                     getJSON(value.url).then(function(pkm) {
