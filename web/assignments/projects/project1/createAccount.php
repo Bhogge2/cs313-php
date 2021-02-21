@@ -24,15 +24,31 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require("dbAccess.php");
 $db = get_db();
 
-$query = 'INSERT INTO users(username, password) VALUES(:username, :password1)';
-$statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
+$queryCheck = 'SELECT * FROM users WHERE username=:username';
+$statementCheck = $db->prepare($queryCheck);
+$statementCheck->bindValue(':username', $username);
 
-$statement->bindValue(':password1', $hashedPassword);
+$result = $statement->execute();
 
-$statement->execute();
+if($result)
+{
 
-header("Location: signIn.php");
+} 
+else
+{
+       $query = 'INSERT INTO users(username, password) VALUES(:username, :password1)';
+       $statement = $db->prepare($query);
+       $statement->bindValue(':username', $username);
+       
+       $statement->bindValue(':password1', $hashedPassword);
+       
+       $statement->execute();
+       
+       header("Location: signIn.php");
+       die();
+}
+
+header("Location: signUp.php");
 die();
 
 ?>

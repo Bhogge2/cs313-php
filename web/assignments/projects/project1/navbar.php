@@ -16,6 +16,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="signIn.php">Sign In / Sign Up</a>
                 </li>
+                <?php
+                if (isset($_SESSION['username'])) {
+                ?>
+                    <li class="nav-item">
+                        Welcome <?php echo $_SESSION['username']; ?>!
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </div>
