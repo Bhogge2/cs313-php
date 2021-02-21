@@ -147,7 +147,7 @@ if (isset($_SESSION['user_id'])) {
             xhttp.send(query);
             setTimeout(function() {
                 document.location.reload()
-            }, 1000);
+            }, 500);
         }
     </script>
 
