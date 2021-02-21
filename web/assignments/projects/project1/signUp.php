@@ -27,7 +27,7 @@
 			<label for="inputPassword2" class="sr-only">Confirm Password</label>
 			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
 
-			<button class="btn btn-lg btn-primary btn-block" type="button" onclick="createAccountChecks()">Create Account</button>
+			<input class="btn btn-lg btn-primary btn-block" type="button" onclick="createAccountChecks()">Create Account</input>
 
 			Already have an account? <a href="signIn.php">Sign in here.</a>
 		</form>
