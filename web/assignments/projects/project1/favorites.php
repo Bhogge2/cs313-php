@@ -21,7 +21,7 @@ session_start();
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container big-container">
-        <h1 style="text-align:center; color: white; text-shadow: 2px 2px 5px black;">Your Favorite Pokemon</h1>
+        <h1 style="text-align:center; color: white; text-shadow: 2px 2px 5px black; margin-top: 70px;">Your Favorite Pokemon</h1>
         <div class="listBox">
             <ul id="favoritesList">
                 <?php
