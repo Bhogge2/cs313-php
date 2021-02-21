@@ -24,11 +24,11 @@
 			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
 			<label for="inputPassword2" class="sr-only">Confirm Your Password</label>
-			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" required>
+			<input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Your Password" style="margin-bottom: 10px;" required>
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 
-			Or <a href="signUp.php">Sign up</a> for a new account.
+			Already have an account? <a href="signIn.php">Sign in here.</a>
 		</form>
 
 
