@@ -65,20 +65,8 @@ function removeFromFavorites(event) {
             }
         }
     }
-
     var query = ('pokemonId=' + pokemon_id);
     xhttp.open('POST', 'removeFavorite.php', true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(query);
-}
-
-function addToFavorites(event) {
-    var pokemon_id = event.target.dataset.pokemon;
-    xhttp = new XMLHttpRequest();
-
-
-    var query = ('pokemonId=' + pokemon_id);
-    xhttp.open('POST', 'addFavorite.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(query);
 }
