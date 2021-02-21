@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include 'navbar.php'; ?>
     <div class="container">
         <div class="content">
             <input type="text" id="myInput" onkeyup="filterPokemon()" placeholder="Search for Pokemon..." title="Type in a Pokemon">

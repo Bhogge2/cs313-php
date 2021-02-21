@@ -165,7 +165,7 @@ function displayFavorites() {
 
 }
 */
-
+/*
 function removeFromFavorites(event) {
     let favorites = JSON.parse(localStorage.getItem("favorites"));
     console.log("item removed");
@@ -177,5 +177,6 @@ function removeFromFavorites(event) {
 
     displayFavorites();
 }
+*/
 
 getAllPokemon();
